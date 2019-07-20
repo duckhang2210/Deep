@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body>
+        <header><img src="assets/images/ban-porn-281x300.jpg"></header>
+        <div id="main-container">
+
+            <div id="start" class="startGame" style="display: block"><h1>Start Quiz</h1></div>
+            
+            <div id="quiz-container">
+              <div id="question"></div>
+              <div id="im"></div>
+              <div id="choices">
+                <a href="#" class="choice" id="A" onclick="checkAnswer('A')"></a>
+                <a href="#" class="choice" id="B" onclick="checkAnswer('B')"></a>
+                <a href="#" class="choice" id="C" onclick="checkAnswer('C')"></a>
+                <a href="#" class="choice" id="D" onclick="checkAnswer('D')"></a>
+              </div>
+            </div>
+            <div id="answer" style="display: none">
+                
+            </div>
+            <div id="countdown" style="display: none">
+                <div id="countdown-number"></div>
+                <svg>
+                  <circle r="18" cx="20" cy="20"></circle>
+                </svg>
+              </div>
+            <div id="currentQuestion"></div>
+            
+            <div id="result" style="display: none">
+              <div id="totalScore">
+                <h1>Result</h1>
+                <h2 id="percent"><h2>
+                <h3><span>Right answer:</span><span id="rightanswer"></span></h3>
+                <h3><span>Wrong answer:</span><span id="wronganswer"></span></h3>
+                
+              </div>
+              <div id="reset" class="startGame" onclick="startGame()"><h1>Reset</h1></div>
+            </div>
+        </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script src="assets/javascript/app.js"></script>
+    
+
+  </body>
+
+</html>

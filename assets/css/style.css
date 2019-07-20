@@ -1,0 +1,241 @@
+body{
+    background-image: url(../images/b.jpg);
+    background-size: 100%;
+}
+header {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+header img{
+    width: 200px;
+}
+#main-container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    text-align: center;
+    background-color: #f7f1e5;
+}
+.startGame h1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    border: thin solid black;
+    color: yellow;
+    background-color: red;
+}
+.startGame h1:hover{
+    background-color: yellow;
+    color: red;
+}
+
+#quiz-container {
+    padding: 10px;
+    border: thin solid black;
+}
+#answer img {
+    width: 400px;
+    height: 350px;
+}
+.choice p{
+    color: black;
+    border: thin solid black;
+    background: yellow;
+    width: 300px;
+    height: 30px;
+    margin: 20px auto;
+}
+.choice p:hover{
+    color: yellow;
+    border: thin solid black;
+    background-color: red;
+    width: 310px;
+}
+a:hover {
+    text-decoration: none;
+}
+#percent {
+
+  color: red;
+}
+
+
+#countdown {
+    position: relative;
+    margin: auto;
+
+    height: 40px;
+    width: 40px;
+    text-align: center;
+  }
+  
+  #countdown-number {
+    color: red;
+    display: inline-block;
+    line-height: 40px;
+    
+  }
+  
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+  
+  svg circle {
+    
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: red;
+    fill: none;
+    animation: countdown 21s linear infinite forwards;
+  }
+  
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 113px;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+ 
+    header {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  header img{
+      width: 200px;
+  }
+  #main-container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5vh;
+      text-align: center;
+      background-color: #f7f1e5;
+  }
+  #answer img {
+    width: 400px;
+    height: 350px;
+}
+  .choice p{
+    color: black;
+    border: thin solid black;
+    background: yellow;
+    width: 70%;
+    height: 50px;
+    margin: 20px auto;
+}
+.choice p:hover{
+    color: yellow;
+    border: thin solid black;
+    background-color: red;
+    width: 75%;
+}
+  
+  }
+  @media screen and (max-width: 768px) {
+    header {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  header img{
+      width: 200px;
+  }
+  #main-container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3vh;
+      text-align: center;
+      background-color: #f7f1e5;
+  }
+  #answer img {
+    width: 300px;
+    height: 200px;
+}
+  .choice p{
+    color: black;
+    border: thin solid black;
+    background: yellow;
+    width: 70%;
+    height: 50px;
+    margin: 20px auto;
+}
+.choice p:hover{
+    color: yellow;
+    border: thin solid black;
+    background-color: red;
+    width: 75%;
+}
+  
+  }
+  @media screen and (max-width: 680px) {
+    header {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  header img{
+      width: 200px;
+  }
+  #main-container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2vh;
+      text-align: center;
+      background-color: #f7f1e5;
+  }
+  .choice p{
+    color: black;
+    border: thin solid black;
+    background: yellow;
+    width: 70%;
+    height: 50px;
+    margin: 20px auto;
+}
+.choice p:hover{
+    color: yellow;
+    border: thin solid black;
+    background-color: red;
+    width: 75%;
+}
+  
+  }
+  @media screen and (max-width: 320px) {
+    header {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  header img{
+      width: 200px;
+  }
+  #main-container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1vh;
+      text-align: center;
+      background-color: #f7f1e5;
+  }
+  
+  }
