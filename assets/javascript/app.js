@@ -222,18 +222,18 @@ function checkAnswer(answer){
         score ++;
         
         //show the correct alert and the picture for right answer 
-        showAnswer.html('<h1>Correct!!!!!!</h1><a href="'+ questions[checkingQuestion].link +'" target="blank"><h1>Link ne Dang oi</h1></a>' );
+        showAnswer.html('<h1>Correct!!!!!!</h1' );
         $('#countdown').css('display', 'none');
         quiz.css('display', 'none');
         showAnswer.css('display','block');
         showAnswer.css('background-color','#e0f9fe');
         showAnswer.css('color','#ff7417');
         showAnswer.css('border','thick solid black');
-        timeout = setInterval(nextQuestion,6000);    
+        timeout = setInterval(nextQuestion,3000);    
     }
     //wrong
     else if(answer !== questions[checkingQuestion].correct) {
-        showAnswer.html('<h1>Wrong!!!!!!</h1><p>'+questions[checkingQuestion].fact+'</p> <a href="'+ questions[checkingQuestion].link +'" target="blank"><h1>Link ne Dang oi</h1></a>' );
+        showAnswer.html('<h1>Wrong!!!!!!</h1><p>'+questions[checkingQuestion].fact+'</p>' );
         $('#countdown').css('display', 'none');
         quiz.css('display', 'none');
         showAnswer.css('display','block');
@@ -242,7 +242,7 @@ function checkAnswer(answer){
         showAnswer.css('border','thick solid yellow');
         wrong ++;
         
-        timeout = setInterval(nextQuestion,6000);
+        timeout = setInterval(nextQuestion,3000);
     };
 };
 //next question
@@ -262,6 +262,7 @@ function nextQuestion(){
         countDown= clearInterval(showingTimer);
         percent = Math.round(100 * score/questions.length);
         $('#percent').html(percent+'%');
+        checkResult();
         showAnswer.css('display', 'none');
         result.css('display', 'block');
         currentQuestion.css('display', 'none');
@@ -270,7 +271,16 @@ function nextQuestion(){
 
     };
 };
-
+function checkResult(){
+    if (percent<50){
+        $('#announce').text("Go home play minescraft Dang!!");
+    } else {
+        $('#announce').html("You're a cultured man. Enjoy yourself<br>" + "<a href='"+questions[0].link+"' target='blank'>Gina Valentina</a><br>"
+        + "<a href='"+questions[1].link+"' target='blank'>Lana Rhodes</a><br>"
+        + "<a href='"+questions[2].link+"' target='blank'>Leah Gotti</a><br>"
+        + "<a href='"+questions[3].link+"' target='blank'>Alexandra Daddario</a><br>" )
+    }
+}
 //Count down from 20;
 function countItDown(showingTimer){
 clearInterval(showingTimer);
@@ -283,7 +293,7 @@ function showingTimer(){
         count--;
     } else{
         //if no choice is made and counter reaches 0
-        showAnswer.html("<h1>Time's up. Too Slow!!!!!!</h1><p>"+questions[checkingQuestion].fact+'</p> <a href="'+ questions[checkingQuestion].link +'" target="blank"><h1>Link ne Dang oi</h1></a>' );
+        showAnswer.html("<h1>Time's up. Too Slow!!!!!!</h1><p>"+questions[checkingQuestion].fact+'</p>' );
         $('#countdown').css('display', 'none');
         quiz.css('display', 'none');
         showAnswer.css('display','block');
